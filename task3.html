@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Loops and Arrays</title>
+    <style>
+        .calculator {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #output {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+            min-height: 20px;
+        }
+        
+        .loop-type {
+            color: #9b59b6;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        .fruit-item {
+            padding: 5px;
+            margin: 3px 0;
+            background-color: #eaf2f8;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Task 3: Loops and Arrays</h2>
+        
+        <p>This demonstrates different types of loops iterating through an array of fruits.</p>
+        
+        <button onclick="runLoops()">Run Loops</button>
+        
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function runLoops() {
+            // a) Create an array of fruits
+            const fruits = ["Apple", "Banana", "Orange", "Mango"];
+            const outputDiv = document.getElementById('output');
+            let outputHTML = '';
+
+            // b) & c) For loop
+            outputHTML += '<div class="loop-type">For Loop Results:</div>';
+            for (let i = 0; i < fruits.length; i++) {
+                outputHTML += `<div class="fruit-item">${fruits[i]}</div>`;
+                console.log("For loop:", fruits[i]);
+            }
+
+            // While loop
+            outputHTML += '<div class="loop-type">While Loop Results:</div>';
+            let j = 0;
+            while (j < fruits.length) {
+                outputHTML += `<div class="fruit-item">${fruits[j]}</div>`;
+                console.log("While loop:", fruits[j]);
+                j++;
+            }
+
+            // Do-while loop
+            outputHTML += '<div class="loop-type">Do-While Loop Results:</div>';
+            let k = 0;
+            do {
+                outputHTML += `<div class="fruit-item">${fruits[k]}</div>`;
+                console.log("Do-while loop:", fruits[k]);
+                k++;
+            } while (k < fruits.length);
+
+            outputDiv.innerHTML = outputHTML;
+        }
+    </script>
+</body>
+</html>

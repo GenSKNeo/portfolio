@@ -1,0 +1,16 @@
+{
+  "name": "see-kwee-neo-portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "surge --project . --domain aievershine.surge.sh"
+  },
+  "devDependencies": {
+    "surge": "^0.23.1"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
